@@ -12,7 +12,7 @@ VERSION_LT='2018-05-01'
 authenticator=IAMAuthenticator(apikey)
 lt = LanguageTranslatorV3(version=VERSION_LT,authenticator=authenticator)
 lt.set_service_url(url)
-# lt
+
 def english_to_french(english_text):
     enfr_translation=lt.translate(text=english_text,model_id='en-fr').get_result()
     enfr_translation_str=enfr_translation['translations'][0]['translation']
